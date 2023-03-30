@@ -28,24 +28,29 @@ $produtocrd = new ProdutoCRD();
 
         <!-- formulario de inserção de produtos -->
         <div class="form-produto">
-            <form action="app/controller/ProdutosController.php" method="POST">
+            <form id="inserir-form" method="POST">
+                <div class="group-form" id="alert"></div>
                 <div class="group-form">
+                    <input type="hidden" name="cadastrar">
+
                     <label for="nome">Nome do Produto</label>
-                    <input type="text" name="nome" id="nome" required>
+                    <input type="text" name="nome" id="nome">
 
                     <label for="preco">Preço</label>
-                    <input type="number" name="preco" id="preco" required>
+                    <input type="number" name="preco" id="preco">
 
                     <label for="cor">Cor</label>
-                    <select id="cor" name="cor" required>
+                    <select id="cor" name="cor">
                         <option value="azul">Azul </option>
                         <option value="vermelho">Vermelho</option>
                         <option value="amarelo">Amarelo</option>
                     </select>
+                    <button type="submit" id="inserir">Inserir Produto</button>
                 </div>
-                <button type="submit" name="cadastrar">Inserir Produto</button>
             </form>
         </div>
+
+        <hr>
 
 
         <div class="listadeprodutos">
@@ -113,8 +118,9 @@ $produtocrd = new ProdutoCRD();
 
 
     <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script type="text/javascript" src="lib/js/modal.js"></script>
     <script type="text/javascript" src="lib/js/filtros.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="lib/js/main.js"></script>
 </body>
 </html>

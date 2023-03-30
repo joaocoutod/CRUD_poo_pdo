@@ -26,6 +26,7 @@ body{
     border: 1px solid #ddd;
     cursor: pointer;
 }
+.alert{padding: 20px}
 /*******************/
 
 
@@ -48,14 +49,14 @@ body{
 
 .form-produto input, .form-produto select{
   vertical-align: middle;
-  margin: 5px 10px 5px 0;
+  margin: 5px 5px 5px 0;
   padding: 10px;
   background-color: #fff;
   border: 1px solid #ddd;
 }
 
 .form-produto button {
-  padding: 10px 20px;
+  padding: 10px;
   background-color: dodgerblue;
   border: 1px solid #ddd;
   color: white;

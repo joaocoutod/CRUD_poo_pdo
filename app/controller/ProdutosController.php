@@ -2,7 +2,6 @@
 
 include_once "../conexao/Conexao.php";
 include_once "../model/Produto.php";
-include_once "../model/Preco.php";
 include_once "../crud/produto_crud.php";
 
 
@@ -47,7 +46,9 @@ if(isset($_POST['cadastrar'])){
 
     $produtocrd->create($produto);
 
-    header("Location: ../../");
+    $feedback = array('status' => 1, 'msg' => 'Cadastro com success');
+    echo json_encode($feedback);
+    exit;
 }
 
 // se a requisição for editar
@@ -68,8 +69,6 @@ else if(isset($_GET['del'])){
 
     $produtocrd->delete($produto);
 
-    header("Location: ../../");
-} else{
     header("Location: ../../");
 }
 ?>
